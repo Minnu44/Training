@@ -1,0 +1,13 @@
+n=int(input(""))
+day=list(map(int,input().split()))
+nite=list(map(int,input().split()))
+lim=int(input())
+extra=0
+for i in range(n):
+    sum=max(nite)+min(day)
+    if(sum>lim):
+        diff=sum-lim
+        extra+=diff
+    day.remove(min(day))
+    nite.remove(max(nite))
+print(extra*100) 
